@@ -15,6 +15,7 @@ app.use(() => {
 });
 
 app.use(errorHandler);
+console.log(DB)
 
 mongoose
   .connect(DB)
@@ -24,6 +25,7 @@ mongoose
       console.log(`Listening On PORT ${PORT}`);
     });
   })
-  .catch(() => {
+  .catch((e) => {
+    console.log('e', e)
     throw createHttpError(501, "Unable to connect database");
   });
