@@ -29,11 +29,14 @@
     "baseUrl": "src", // This must be specified if "paths" is.
     
    "paths": {
+     
     "@config/*": ["config/*"],
     "@controllers/*": ["controllers/*"],
     "@db/*": ["db/*"],
     "@middleware/*": ["middleware/*"],
     "@model/*": ["model/*"],
+    "@helpers/*": ["helpers/*"],
+    "@routes/*": ["routes/*"],
      
    },
 

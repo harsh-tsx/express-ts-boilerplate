@@ -1,8 +1,4 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-export default {
-    port:{
-        authentication:9999
-    }
-}
+export const port ={authentication:9999}

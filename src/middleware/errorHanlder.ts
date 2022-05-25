@@ -1,7 +1,7 @@
 import { ErrorRequestHandler } from "express";
 
 export const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
-	console.log(err.message, err.statusCode);
+	// console.log(err.message, err.statusCode);
 	if (res.headersSent) {
 		return next(err);
 	}

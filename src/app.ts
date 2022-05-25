@@ -1,14 +1,14 @@
 import express, { ErrorRequestHandler } from "express";
 import createHttpError from "http-errors";
-import exampleRoute from "./routes/exampleRoutes";
+
 import mongoose from "mongoose";
-import { DB, PORT } from "./config";
+import { DB, PORT}  from "@config/index"
 import { errorHandler } from "./middleware/errorHanlder";
 import morgan from "morgan";
 const app = express();
 app.use(express.json());
 
-app.use("/", exampleRoute);
+
 
 app.use(() => {
   throw createHttpError(404, "Route not found");
